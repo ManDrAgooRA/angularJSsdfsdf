@@ -64,6 +64,17 @@
           "count": 12,
           "$$hashKey": "object:13",
           "addedToCart": 1
+        },
+        {
+          "id": 4,
+          "title": "Title4",
+          "price": 980,
+          "description": "Decrition4",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+          "isFavorite": false,
+          "count": 4,
+          "$$hashKey": "object:67",
+          "addedToCart": 1
         }
       ],
       "favorites": []
