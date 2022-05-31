@@ -92,11 +92,11 @@ app.config(function ($routeProvider) {
         controller: 'cartCtrl',
         template: require('./pages/Cart/cart.html').default
     })
-    $routeProvider
-        .when('/acticlePage', {
-        template: require('./pages/ArticlePage/articlePage.html').default,
-        controller: 'articlePageCtrl'
-    })
+    // $routeProvider
+    //     .when('/acticlePage', {
+    //     template: require('./pages/ArticlePage/articlePage.html').default,
+    //     controller: 'articlePageCtrl'
+    // })
     .otherwise({
         redirectTo: '/error'
     })
