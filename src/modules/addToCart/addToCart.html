@@ -1,0 +1,19 @@
+<div ng-switch="isAdded">
+  <div ng-switch-when="true">
+    <button 
+      class="btn btn-success" 
+      ng-click="redirectToCart($event)" 
+      ng-disabled="{{isDisabled}}"
+      >
+      Go to cart
+      </button>
+  </div>
+  <div ng-switch-when="false">
+    <button 
+      class="btn btn-primary" 
+      ng-click="addToCart($event)" 
+      ng-disabled="{{isDisabled}}"
+      >Add to cart
+    </button>
+  </div>
+</div>

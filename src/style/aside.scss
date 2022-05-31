@@ -1,0 +1,14 @@
+.aside{
+  &-container{
+    border-right: 1px solid #ebebeb;
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px){
+  .aside{
+    &-container{
+      margin: 10px 0;
+    }
+  }
+}

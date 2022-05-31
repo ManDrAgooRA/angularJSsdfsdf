@@ -1,0 +1,24 @@
+<div ng-switch="isLoading" class="container-fluid switch-wrapper ">
+  <div ng-switch-when="true">
+    <spinner-template></spinner-template>
+  </div>
+  <div ng-switch-when="false">
+    <div class="product-container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12">
+          <div class="product-img-wrapper">
+            <img ng-src="{{responseSuccess.img}}" alt="product-img">
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-12">
+          <button class="btn btn-primary" ng-click="backToList()">Back to product-list</button>
+          <p>id: {{responseSuccess.id}}</p>
+          <p>Product name: {{responseSuccess.title}}</p>
+          <p>Description: {{responseSuccess.description}}</p>
+          <p>Price: {{responseSuccess.price}}$</p>
+          <add-to-cart-template></add-to-cart-template>
+          <favorites-template></favorites-template>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+.nav{
+  &-bar{
+    &-logo{
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    a{
+      & span{
+        position: absolute;
+        top: 4px;
+        right: -4px;
+        border-radius: 50%;
+        background-color: #ff0000;
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+    & svg{
+      width: 20px;
+      color: #707071;
+      transition: .4s;
+      &:hover{
+        color: darken($color: #707071, $amount: 80)
+      }
+    }
+  }
+}
+
+.collapse-wrapper{
+  width: 100%;
+  justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  .navbar{
+    &-nav{
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+  }
+  .nav{
+    &-item{
+      max-width: 38px;
+      a{
+        span{
+          top: -2px;
+          right: -8px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .collapse-wrapper{
+    width: auto;
+  }
+}
+

@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <div ng-show="!user.cart.length">
+      Cart is empty
+    </div>
+    <div class="col-lg-12 my-2" ng-repeat="cartItem in user.cart">
+      <div class="card">
+        <div class="card-body cart-wrapper">
+          <div class="cart-content col-lg-8 col-md-8 col-sm-12">
+            <div class="cart-product-img">
+              <img src="{{cartItem.img}}" alt="cart-img">
+            </div>
+            <div class="cart-product-description">
+              <div class="cart-product-title">
+                <h5>{{cartItem.title}}</h5>
+                <div class="cart-product-description">
+                  <p>Price: {{cartItem.price}}</p>
+                  <p>
+                    {{cartItem.description}}
+                  </p>
+                  <p>Left on a store: {{cartItem.count}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-buttons col-lg-2 col-md-2">
+            <button class="btn btn-danger cart-delete" ng-click="deleteFromCart(cartItem.id)">delete</button>
+            <div class="cart-counter">
+              <button class="btn btn-outline-primary" ng-click="decrementCartItem(cartItem.id)">-</button>
+              <input type="number" min="1" max="{{cartItem.count}}" value={{cartItem.addedToCart}} ng-model="cartItemValue" ng-change="setCartItem(cartItemValue, cartItem.id)">
+              <button
+               class="btn btn-outline-primary" 
+               ng-click="incrementCartItem(cartItem.id)"
+               >+
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-price">
+      <span>Total Price: {{totalPrice}}</span>
+      <button class="btn btn-outline-primary" ng-click="buy()">Buy</button>
+    </div>
+  </div>
+</div>

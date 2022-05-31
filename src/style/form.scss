@@ -1,0 +1,28 @@
+.form{
+  &-wrapper{
+    & form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+
+.strike {
+  text-decoration: line-through;
+}
+.bold {
+  font-weight: bold;
+}
+.red {
+  color: red;
+}
+.has-error {
+  color: red;
+  background-color: yellow;
+}
+.orange {
+  color: orange;
+}

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  
+  <div>
+    List of words:
+    <ul>
+      <li ng-repeat="item in words">
+        <a href="" ng-click="setSelectedWord(item)">{{item}}</a>
+      </li>
+    </ul>
+
+    selectedWord:{{selectedWord}}
+    <br>
+
+    <div ng-repeat="item in changedArticles track by $index">
+      <br>
+      <h2 id="{{item.id}}" ng-bind-html="item.id"></h2>
+      <br>
+      <div ng-repeat="innerItem in item.text track by $index">
+        <div ng-repeat="block in innerItem track by $index">
+          <p ng-bind-html="block.content"></p>
+        </div>
+      </div>
+ </div>
+    <div id="title">selectedWord: {{selectedWord}}</div>
+  </div>
+</div>
+

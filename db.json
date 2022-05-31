@@ -1,0 +1,123 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Title",
+      "price": 850,
+      "description": "Decrition",
+      "img": "https://content1.rozetka.com.ua/goods/images/big/254840624.jpg",
+      "count": 12
+    },
+    {
+      "id": 2,
+      "title": "Title2",
+      "price": 550,
+      "description": "Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2",
+      "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "title": "Title3",
+      "price": 230,
+      "description": "Decrition3",
+      "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+      "isFavorite": false,
+      "count": 0
+    },
+    {
+      "id": 4,
+      "title": "Title4",
+      "price": 980,
+      "description": "Decrition4",
+      "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+      "isFavorite": false,
+      "count": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 0,
+      "email": "admin@gmail.com",
+      "password": "$2a$10$poGcHvJ73Jldc0k/9kkR1ecBtbACJYNg4tTgGgyQtD2Kj.uZfeyBq",
+      "phone": "(111) 111-1111",
+      "dateOfBirthDay": "6/14/2009",
+      "userName": "Evgeniy",
+      "role": "admin",
+      "cart": [
+        {
+          "id": 1,
+          "title": "Title",
+          "price": 850,
+          "description": "Decrition",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/254840624.jpg",
+          "count": 12,
+          "$$hashKey": "object:13",
+          "addedToCart": 1
+        }
+      ],
+      "favorites": []
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$OnRd69ppz15NEyGy/oMGr.FOhyNcTyj8SL16Zzc7/tYF9A19c0ndu",
+      "id": 1,
+      "phone": "(111) 111-1111",
+      "dateOfBirthDay": "6/14/2009",
+      "userName": "Test",
+      "role": "admin",
+      "cart": [
+        {
+          "id": 1,
+          "title": "Title",
+          "price": 850,
+          "description": "Decrition",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/254840624.jpg",
+          "count": 12,
+          "$$hashKey": "object:18",
+          "addedToCart": 1
+        },
+        {
+          "id": 2,
+          "title": "Title2",
+          "price": 550,
+          "description": "Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+          "count": 0,
+          "$$hashKey": "object:19",
+          "addedToCart": 1
+        }
+      ],
+      "favorites": [
+        {
+          "id": 1,
+          "title": "Title",
+          "price": 850,
+          "description": "Decrition",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/254840624.jpg",
+          "count": 12,
+          "$$hashKey": "object:56"
+        },
+        {
+          "id": 2,
+          "title": "Title2",
+          "price": 550,
+          "description": "Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2 Decrition2",
+          "img": "https://content1.rozetka.com.ua/goods/images/big/261853665.jpg",
+          "count": 0,
+          "$$hashKey": "object:57"
+        }
+      ]
+    }
+  ]
+}

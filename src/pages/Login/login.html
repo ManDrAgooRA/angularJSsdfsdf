@@ -1,0 +1,53 @@
+<div class="container-fluid my-2 form-wrapper">
+  <div ng-switch="isLoading" class="switch-wrapper">
+    <div ng-switch-when="true">
+      <spinner-template></spinner-template>
+    </div>
+    <div ng-switch-when="false">
+      <form class="row g-3" name="loginForm" ng-submit="login(email, password)">
+        <div class="col-md-4">
+          <label for="validationServer01" class="form-label">Email</label>
+          <input 
+            name="email"
+            type="email"
+            ng-model="email"
+            ng-class="{
+              'is-valid': loginForm.email.$valid,
+              'is-invalid': loginForm.email.$invalid && loginForm.email.$dirty
+            }"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Email"
+            required
+          >
+          <div class="invalid-feedback">
+            Email must be valid!
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <label for="validationServer02" class="form-label">Password</label>
+          <input 
+          name="password"
+          type="password" 
+          ng-model="password"
+          ng-class="{
+            'is-valid': loginForm.password.$valid,
+            'is-invalid': password.length < 6 && loginForm.password.$dirty
+          }"
+          class="form-control"
+          id="validationServer02"
+          placeholder="Password"
+          required
+          >
+          <div class="invalid-feedback">
+            Password length must be more 6 elements!
+          </div>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-primary" type="submit" ng-disabled="!loginForm.email.$valid || password.length < 6">Submit form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

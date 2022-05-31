@@ -1,0 +1,31 @@
+
+<div ng-switch="isLoading" class="switch-wrapper col-lg-9">
+  <div ng-switch-when="true">
+    <spinner-template></spinner-template>
+  </div>
+  <div ng-switch-when="false">
+    <div class="products-wrapper">
+     <div class="row gx-3 gy-3">
+       <div 
+        class="col-lg-4 col-md-12 product-item" 
+        ng-repeat="productItem in responseSuccess" 
+        ng-click="showId(productItem.id)"
+       >
+         <div class="product-item-wrapper product-item-wrapper__disabled">
+           <div class="product-img-wrapper">
+             <img ng-src="{{productItem.img}}" alt="product-img">
+            </div>
+            <div class="product-body">
+              <h5>{{productItem.title}}</h5>
+              <p>id: {{productItem.id}}</p>
+              <p>Price: {{productItem.price}}$</p>
+              <p>{{productItem.description}}</p>
+            </div>
+            <div ng-show="{{!productItem.count}}">Нет в наличии</div>
+            <add-to-cart-template></add-to-cart-template>
+            <favorites-template></favorites-template>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
